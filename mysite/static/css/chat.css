@@ -1,0 +1,141 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+#chat-box {
+  position: absolute;
+  bottom: 20px;
+}
+
+#chat-user {
+  width: 500px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid #cdcdcd;
+  border-radius: 20px;
+  color: #cdcdcd;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-transition: border .5s ease, color .5s ease;
+  transition: border .5s ease, color .5s ease;
+}
+
+#chat-user:focus,
+#chat-user:hover {
+  border: 2px solid rgb(178, 218, 226);
+  color: #000;
+  outline: 0;
+}
+
+#chat-submit {
+  width: 45px;
+  height: 56px;
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #cdcdcd;
+  color: #cdcdcd;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-transition: border .5s ease, color .5s ease;
+  transition: border .5s ease, color .5s ease;
+}
+
+#chat-submit:hover,
+#chat-submit:focus {
+  border: 2px solid #69D2E7;
+  color: #69D2E7;
+  outline: 0;
+}
+
+.dialogue {
+  min-width: 20%;
+  max-width: 70%;
+  border: 1px solid #cdcdcd;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  clear: both;
+  
+}
+
+.dialogue-bot {
+  background-color: #fcfcfc;
+  float: left;
+}
+
+.dialogue-user {
+  background-color: rgb(155, 226, 240);
+  float: right;
+}
+  
+
+.top-padding {
+  margin-top: 10px;
+}
+
+.user-message {
+	background-color: #F7F7F7;
+}
+
+.chat-message {
+	background-color: #DBDBDB;
+}
+
+.send-btn {
+	position: absolute;
+    top: 12px;
+    font-size: 30px;
+    color: grey;
+    right: 20px;
+}
+
+.send-btn:hover {
+	color: rgba(0, 128, 0, 0.61);
+}
+
+#text-box {
+	position: relative;
+	bottom: 8px;
+	width: 95%;
+}
+
+#text-box textarea {
+	border: 2px solid;
+}
+
+.navbar {
+  background-color: #7D7D7D;
+  padding: 10px 10px;
+}
+
+.navbar-light .navbar-brand{
+	color: #FFFFFF;
+}
+
+#app {
+	margin-left: 0px;
+}
+
+#app .card {
+	margin-bottom: 5px;
+}
+
+#app p {
+	margin-bottom: 0px;
+}
