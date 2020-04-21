@@ -13,7 +13,7 @@ window.onload=function(){
     container = document.getElementById('dialogue-container');
     keywords = [];
     reply;
-    audioPlayer = document.getElementById('audio-player');
+	audioPlayer = document.getElementById('audio-player');
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         create_bubble_user();
@@ -38,6 +38,8 @@ function create_bubble_user() {
 
 		setTimeout(function() {
 			create_bubble_bot(reply);
+			audioPlayer.setAttribute('src',"/media/remindme.wav");
+			audioPlayer.load();
 			audioPlayer.play();
 		}, 500);
 		
