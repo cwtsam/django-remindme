@@ -3,7 +3,7 @@ body {
   letter-spacing: 1px;
   font-size: 20px;
   padding: 20px;
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 
@@ -18,12 +18,14 @@ button {
 }
 
 #chat-box {
+  width: 60%;
   position: absolute;
+  margin: auto;
   bottom: 20px;
 }
 
 #chat-user {
-  width: 500px;
+  width: 80%;
   height: 50px;
   background-color: transparent;
   border: 2px solid #cdcdcd;

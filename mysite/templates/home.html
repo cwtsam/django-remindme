@@ -5,21 +5,23 @@
 {% endblock %}
 
 {% block css %} 
-<link rel="stylesheet" type="text/css" href="/static/css/chat.css">
+
 {% endblock %}
 
 {% block content %}
   <div id="app" class="container top-padding">
-    <form id='chat-box'>
-      <input type='text ' id='chat-user' name='chat-user' placeholder='Talk to me'>
-      <input type='submit' id='chat-submit' value='↑'>
-    </form>
+    
   
     <div id='dialogue-container'>
       <div class='dialogue dialogue-bot'>
         Hello! What would you like me to remind you about?
       </div>
     </div>
+
+    <form id='chat-box'>
+        <input type='text' id='chat-user' name='chat-user' placeholder='Talk to me'>
+        <input type='submit' id='chat-submit' value='↑'>
+    </form>
 
     <audio id='audio-player'>
       <source src="/media/hello.wav" type="audio/wav">
