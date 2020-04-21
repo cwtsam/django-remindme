@@ -1,8 +1,7 @@
 "# django-remindme" 
 
 Prereq:
-> pip install django djangorestframework
-> pip install chatterbot
+> pip install django djangorestframework chatterbot
 
 To run:
 > python mysite/manage.py runserver
