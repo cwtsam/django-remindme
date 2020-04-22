@@ -4,6 +4,8 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 
 from chatterbot import ChatBot
+import random
+
 
 chatbot = ChatBot('Norman')
 
@@ -19,7 +21,9 @@ def get_response(request):
         data = json.loads(request.body.decode('utf-8'))
         message = data['message'] # message from user
         chat_response = chatbot.get_response(message).text # chatterbox response to message
-        response['message'] = {'text': chat_response, 'user': False, 'chat_bot': True}
+        audio_source = random.choice(['hello','remindme'])
+        response['message'] = {'text': chat_response, 'user': False, 'chat_bot': True,
+         'audio': audio_source}
         response['status'] = 'ok'
     else:
         response['error'] = 'no post data found'

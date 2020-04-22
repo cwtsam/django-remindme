@@ -4,6 +4,7 @@ var input = document.getElementById('chat-user');
 var container = document.getElementById('dialogue-container');
 var keywords = [];
 var reply;
+var audiosource;
 var audioPlayer = document.getElementById('audio-player');
 
 window.onload=function(){
@@ -38,7 +39,7 @@ function create_bubble_user() {
 
 		setTimeout(function() {
 			create_bubble_bot(reply);
-			audioPlayer.setAttribute('src',"/media/remindme.wav");
+			audioPlayer.setAttribute('src',audiosource);
 			audioPlayer.load();
 			audioPlayer.play();
 		}, 500);
@@ -48,8 +49,8 @@ function create_bubble_user() {
 			'user': true,
 			'chat_bot': false, // gets the text, and indicates that its from user
 		};
-		console.log(message['text']);
-		
+		//console.log(message['text']);
+		var audio;
 		fetch("/get-response/", { // fetch response to get json string?
 			body: JSON.stringify({'message': message['text']}), // message that you typed
 			cache: 'no-cache', 
@@ -65,6 +66,9 @@ function create_bubble_user() {
 			}) // once fetch request has been completed, it will go to .then requests
 			.then(response => response.json()).then((json) => {
 				reply = json['message']['text'];
+				audio = json['message']['audio'];
+				audiosource = "/media/" + audio + ".wav"
+				console.log(audiosource);
 			})
 		input.value = '';
 	}
