@@ -13,6 +13,9 @@
             </a>
         </nav>
 
+        <!-- Samanatha Copy this block until end comment-->
+        <!-- read bottom instructions carefully -->
+        <!-- ------------------------------------------------------------------------------- -->
 
         <div id="remindme-body-welcome">
             <div class="remindme-header">
@@ -26,9 +29,6 @@
                 <div class="center generic-button"  id="add-voice-button" onclick="addVoice()">
                     <Label> + <br> Add a voice</Label>
                 </div>
-                <!-- <div class="center generic-button" id="chat-now-button" onclick="chatNow()">
-                    <label>&#x1F5E9; <br> Chat with Virtual assistant</label>
-                </div> -->
             </div>   
             <div class="remindme-buttons">
                 <div class="center generic-button" id="chat-now-button" onclick="chatNow()">
@@ -39,6 +39,7 @@
         </div>
            
         <!-- ------------------------------------------------------------------------------- -->
+
         <div id="remindme-body-addvoice" style="display: none">    
             <div class="remindme-header">
                 <label class="back-button" onclick="goBack()"> &#8592; back </label> 
@@ -57,7 +58,6 @@
 
         <!-- ------------------------------------------------------------------------------- -->
 
-        <!-- ------------------------------------------------------------------------------- -->
         <div id="remindme-body-inviteothers" style="display: none">
             <div >
                 <div class="remindme-header">
@@ -89,6 +89,7 @@
                 </div>
             </div>
         </div>
+
         <!-- ------------------------------------------------------------------------------- -->
 
 
@@ -106,9 +107,17 @@
                 </div>
            </div>
         </div>
-
-
         </div>
+
+        <!-- ------------------------------------------------------------------------------- -->
+
         <script type="text/javascript" src="../static/js/app.js"></script>
+
+        <!-- Samanatha Copy this block until start comment-->
+        <!-- make sure you have changed above script url starting ../ into just /  src should start with / charactor according to your django syntax-->
+        <!-- dont' forget to add app.css which is included in head element-->
+        <!-- you can test this fill as a standablone app, then we can mearge other two components, remindme record and chatbot -->
+
+
     </body>
 </html>
