@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../static/css/chat.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/app.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand">
+              <!--img src="/static/img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""-->
+              RemindMe
+            </a>
+        </nav>
+
+
+        <div id="remindme-body-welcome">
+            <div class="remindme-header">
+                <label>Welcome!</label>
+            </div>
+           <div>
+            <p id="intro-text">
+                RemindMe is a tool to record samples of a voice and to interact with a virtual assistant which resembles that voice. We encourage you to invite your family and friends to share their voices.
+            </p>
+            <div class="remindme-buttons">
+                <div class="center generic-button"  id="add-voice-button" onclick="addVoice()">
+                    <Label> + <br> Add a voice</Label>
+                </div>
+                <!-- <div class="center generic-button" id="chat-now-button" onclick="chatNow()">
+                    <label>&#x1F5E9; <br> Chat with Virtual assistant</label>
+                </div> -->
+            </div>   
+            <div class="remindme-buttons">
+                <div class="center generic-button" id="chat-now-button" onclick="chatNow()">
+                    <label>&#x1F5E9; <br> Chat with Virtual assistant</label>
+                </div>
+            </div>      
+           </div>
+        </div>
+           
+        <!-- ------------------------------------------------------------------------------- -->
+        <div id="remindme-body-addvoice" style="display: none">    
+            <div class="remindme-header">
+                <label class="back-button" onclick="goBack()"> &#8592; back </label> 
+                <label>Add a voice<label>
+            </div>
+            <div >
+                <p id="intro-text">
+                    RemindMe is a tool to record samples of a voice and to interact with a virtual assistant which resembles that voice. We encourage you to invite your family and friends to share their voices.
+                </p>
+                <div class="remindme-buttons">
+                    <input  class="generic-button" type="button" value="Record my own voice" onclick="recordVoice()">
+                    <input class="generic-button" type="button" value="Invite others to share their voice" onclick="inviteOthers()">
+                </div>
+           </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------------- -->
+        <div id="remindme-body-inviteothers" style="display: none">
+            <div >
+                <div class="remindme-header">
+                    <label class="back-button" onclick="goBack()"> &#8592; back </label> 
+                    <label>Invite others</label>
+                </div>
+                <div id="link-copied" style="height: 50px; background-color: lightblue;">
+                    <label>Link copied to clipboard</label>
+                </div>
+                <div  id="invite-block">
+                    <div style="flex:40%; height: 150;">
+                        <button class="generic-button" onclick="inviteThisPerson()">Person is with me now </button>
+                    </div>
+                    <div style="flex:60%; height: 150;">
+                        <label>Invitation Link</label>
+                        <div id="copy-link">
+                            <label>https://remindme.app/v214</label>
+                            <label onclick="copyLink()">COPY LINK</label>
+                        </div>
+                        <div>
+                            <Button class="rounded-button" >E</Button>
+                            <Button class="rounded-button">W</Button>
+                            <Button class="rounded-button">f</Button>
+                        </div>
+                    </div>
+                </div>   
+                <div id="inform-you"> 
+                    <label>We would inform you when your invitee has responded.</label>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------- -->
+
+
+        <div id="remindme-body-invitee" style="display: none">    
+            <div class="remindme-header">
+                <label class="back-button" onclick="goBack()"> &#8592; back </label> 
+                <label>Your invitee will be starting the recording process<label>
+            </div>
+            <div >
+                <p id="intro-text">
+                    Now, please let the person you have invited use your computer and this tool.
+                </p>
+                <div class="remindme-buttons">
+                    <input class="generic-button" type="button" value="Continue" onclick="recordVoice()">
+                </div>
+           </div>
+        </div>
+
+
+        </div>
+        <script type="text/javascript" src="../static/js/app.js"></script>
+    </body>
+</html>

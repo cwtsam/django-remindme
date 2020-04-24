@@ -1,0 +1,128 @@
+#main-app-wrapper{
+    background-color: lightgrey;
+    height: 400;
+    border: solid rebeccapurple;
+}
+
+.generic-button{
+    width: 160;
+    height: 120;
+    background-color: #778f9b;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    font-size: large;
+    white-space: normal;
+    box-shadow: none;
+}
+
+.remindme-buttons{
+    cursor: pointer;
+    text-align: center;
+}
+
+#add-voice-button {
+    display: inline-block !important;
+    height: 60 !important;
+    cursor: pointer;
+    background-color: #0096a5 !important;
+}
+
+#add-voice-button label {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#chat-now-button {
+    display: inline-block !important;
+    cursor: pointer;
+    background-color: #ffaf50 !important;
+}
+
+#chat-now-button label {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.remindme-header {
+    height: 20px;
+    padding-top: 10px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#remindme-body-welcome {
+    align-items: center;
+}
+
+
+
+#intro-text {
+    text-align: justify;
+    padding: 10;
+}
+
+.center {
+    text-align: center;
+}
+
+
+#link-copied{
+    visibility: hidden;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+#inform-you{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.rounded-button {
+    width: 50;
+    height: 50;
+    border-radius: 50%;
+}
+
+#copy-link{
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: lightgray;
+    height: 30;
+}
+
+#copy-link :nth-child(2){
+    cursor: pointer;
+    color: blue;
+}
+
+#invite-block{
+    display: flex;
+}
+
+.back-button{
+    display: block; 
+    position:absolute;
+    cursor: pointer; 
+}
+
+/* #invite-block div :nth-child(1){
+    flex:40%; 
+    height: 150; 
+    background-color: red;
+}
+
+#invite-block div :nth-child(2){
+    flex:60%; 
+    height: 150; 
+    background-color: blue;
+} */
