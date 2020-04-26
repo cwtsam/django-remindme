@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../static/css/record.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/chat.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/app.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand">
+              <!--img src="/static/img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""-->
+              RemindMe Record
+            </a>
+        </nav>
+
+        <!-- ---------------------------------------------------------------------------------------------------------- -->
+
+        <div id="record-welcome">
+            <div class="remindme-header">
+                <label>Welcome!</label>
+            </div>
+            <div>
+                <div style="text-align: center; height: 50; padding: 50;">
+                    <h2 >You have been invited to share your voice</h2>
+                </div>
+                <div class="inter-body">
+                    <p id="intro-text">
+                        RemindMe is a tool that can record samples of your voice and allow your family/friends to interact with a virtual assistant which resembles your voice
+                    </p>
+                </div>
+                <div class="remindme-buttons">
+                    <input class="button grey" style="margin-top: 50;" type="button" value="Continue" onclick="giveName()">
+                </div>   
+           </div>
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+
+        <div id="record-name" style="display: none;">
+            <div class="remindme-header">
+                <label>You will be starting the recording process</label>
+            </div>
+            <div>
+                <div style="text-align: center; height: 50; padding: 50;">
+                    <h2 >Give a name to your voice</h2>
+                </div>
+                <div class="inter-body"> 
+                    <div class="remindme-buttons">
+                        <Input id="name-input" type="text" placeholder="Voice name" onkeyup="validateName()">
+                    </div>  
+                </div>
+                
+                
+                <div class="remindme-buttons">
+                    <input id="show-checklist-button" class="button grey inactive" style="margin-top: 50;" disabled type="button" value="Continue" onclick="showChecklist()">
+                </div>   
+           </div>
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+
+        <div id="record-checklist" style="display: none;">
+            <div class="remindme-header">
+                <label>Instructions</label>
+            </div>
+            <div>
+                <div style="text-align: center; height: 50; padding: 50;">
+                    <h2> Check each box once you have read the instruction </h2>
+                </div>
+                <form >
+
+                    <label class="checkcontainer">Click the Record button and say the shown sentences out loud
+                        <input type="checkbox" id="option1" onclick="markChecklist('option1')">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkcontainer">Click Finish once you have said them
+                        <input type="checkbox" id="option2" onclick="markChecklist('option2')">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkcontainer">Click Review to hear the recording
+                        <input type="checkbox" id="option3" onclick="markChecklist('option3')">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkcontainer">If you are satisfied with the quality and clarity of the recording, click Submit
+                        <input type="checkbox" id="option4" onclick="markChecklist('option4')">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkcontainer">If not, click Record Again
+                        <input type="checkbox" id="option5" onclick="markChecklist('option5')">
+                        <span class="checkmark"></span>
+                    </label>
+     
+                </form>  
+                <div class="remindme-buttons">
+                    <input id="record-screen-button" class="button grey inactive" style="margin-top: 50;" type="button" disabled value="Next" onclick="startRecordMain()">
+                </div>   
+           </div>
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+
+
+        <div id="record-main" style="display: none;">
+            <div id="title-wrapper">
+                <label id="title"> You are creating the voice: sam voice  </label>
+                <label>Time Recorded: </label>
+                <label id="count-down-value"> 0 s</label>
+            </div> 
+            <div class="generic" id="record-instruction">
+                <p class="generic">
+                    Speak the sentences below clearly. Ensure that you are in quite room with no background noise. We need a minimum of 20 seconds of worth of recordings.
+                </p>
+            </div>
+            <div id="record-sentence">
+                <p>
+                    You stop absorbing the influences because you see yourself as the source. It's subtle, easy to miss. But slowly your source material narrows, your resources diminish, and you are left to repeat yourself.
+                </p>
+            </div>
+            <div id="controls">
+                <input id="button-record" class="button" type="button" value="Record" onclick="startRecording()">
+                <input id="button-stop" class="button finish display-none" type="button" value="Finish" onclick="stopRecording()">
+                <audio id='audio-player2' src="" type="audio/ogg"></audio>
+            </div>
+            <div id="final-controls" class="display-none">
+                <input id="button-record" class="button again" type="button" value="Record again" onclick="recordAgain()">
+                <input id="button-record" class="button review" type="button" value="Review" onclick="playRecording()">
+                <input id="button-stop" class="button submit" type="button" value="Submit" onclick="submitRecording()">
+                <!-- <audio id='audio-player2' src="" type="audio/ogg"></audio> -->
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+
+        <div id="record-done" style="display: none;">
+            <div class="remindme-header">
+                <label>Done!</label>
+            </div>
+            <div>
+                <div style="text-align: center; height: 50; padding: 50;">
+                    <label id="confirmation-note" >Voice: {} will be created. An email will be sent when the voice is ready</label>
+                </div>
+                
+                <div class="remindme-buttons">
+                    <input class="button grey go-remind-me" style="margin-top: 50;" type="button" value="Go to RemindMe Home" onclick="openRemindMeHome()">
+                </div>   
+           </div>
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+        <script src="../static/js/record.js"></script>
+    </body>
+</html>
